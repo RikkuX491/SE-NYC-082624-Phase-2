@@ -8,7 +8,7 @@
 
 |No. | Lecture                          | Starter 	| Example Code 	| Solution 	|
 |----|------------------------------	|:-----:	|--------	|---------	|
-|1 | Introduction to React              |[01_starter](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/01_starter)|||
+|1 | Introduction to React              |[01_starter](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/01_starter)|[01_example_code](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/01_example_code)||
 |2 | Components & Props                 ||||
 |3 | State & Events                     ||||
 |4 | Information Flow                   ||||
