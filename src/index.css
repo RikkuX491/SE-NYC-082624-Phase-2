@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.app {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: 900;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.logo {
+  font-size: 1.25em;
+  padding-left: 0.5rem;
+  text-shadow: 0 0 0 var(--green);
+}
+
+main {
+  padding: 0 1rem;
+}
+
+.pet-list {
+  list-style: none;
+}
+
+.pet {
+  margin: 1rem;
+}
+
+.pet img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .pet-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .pet {
+    width: calc(33% - 2rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pet {
+    width: calc(25% - 2rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .pet {
+    width: calc(20% - 2rem);
+  }
+}
