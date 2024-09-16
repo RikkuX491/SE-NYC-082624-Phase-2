@@ -1,22 +1,26 @@
+// Deliverable # 13 solution code
 import {pets} from "../data/petsData"
 
+// Deliverable # 14 solution code
+const petLIs = pets.map(pet => {
+    return (
+        // Deliverable # 15 & 16 solution code
+        <li key={pet.id} className="pet">
+            <img src={pet.image} alt={pet.name}/>
+            <h4>{pet.name}</h4>
+        </li>
+    )
+})
+
+// Deliverable # 7 solution code
 function PetList(){
-
-    // console.log(pets)
-    console.log(pets[0])
-
     return (
         <ul className="pet-list">
-            <li className="pet">
-                <img src={pets[0].image} alt={pets[0].name}/>
-                <h4>{pets[0].name}</h4>
-            </li>
-            <li className="pet">
-                <img src={pets[1].image} alt={pets[1].name}/>
-                <h4>{pets[1].name}</h4>
-            </li>
+            {/* Deliverable # 14 solution code */}
+            {petLIs}
         </ul>
     )
 }
 
-export default PetList
+// Deliverable # 8 solution code
+export default PetList;
