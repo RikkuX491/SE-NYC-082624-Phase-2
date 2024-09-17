@@ -1,3 +1,4 @@
+// Deliverable # 13 solution code
 function Pet({pet}){
 
     return (
@@ -8,4 +9,5 @@ function Pet({pet}){
     )
 }
 
+// Deliverable # 14 solution code
 export default Pet;

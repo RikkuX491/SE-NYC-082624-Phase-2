@@ -1,3 +1,4 @@
+// Deliverable # 2 solution code
 function Header(){
     return (
         <header>
@@ -9,4 +10,5 @@ function Header(){
     )
 }
 
+// Deliverable # 3 solution code
 export default Header;

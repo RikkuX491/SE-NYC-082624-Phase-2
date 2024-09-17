@@ -1,7 +1,8 @@
+// Deliverable # 3 solution code
 import Header from './Header';
-import PetList from "./PetList";
 
-import ExampleComponent from './ExampleComponent';
+// Deliverable # 6 solution code
+import PetList from "./PetList";
 
 function App() {
 
@@ -43,22 +44,14 @@ function App() {
     }
   ]
 
-//   console.log(pets[0].name)
-
-//   const props = {
-//     petsData: pets,
-//     firstPetName: pets[0].name
-//   }
-
   return (
+    // Deliverable # 1 solution code
     <div className="app">
+        {/* Deliverable # 4 solution code */}
         <Header/>
-        <PetList pets={pets} owner={"Alice"}/>
 
-        {/* {ExampleComponent(pets, pets[0].name)} */}
-        {/* {ExampleComponent(props)} */}
-        {/* {ExampleComponent({petsData: pets, firstPetName: pets[0].name})} */}
-        {/* <ExampleComponent petsData={pets} firstPetName={pets[0].name}/> */}
+        {/* Deliverable # 7 & 8 solution code */}
+        <PetList pets={pets}/>
     </div>
   );
 }

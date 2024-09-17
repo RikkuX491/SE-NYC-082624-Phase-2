@@ -1,41 +1,22 @@
+// Deliverable # 14 solution code
 import Pet from "./Pet";
 
-// We can also destructure an object within the parameter for a function, as can be seen in the example on line 4
-function PetList({pets, owner}){
+// Deliverable # 5 & 9 solution code
+function PetList({pets}){
 
-    // console.log(props)
-    // console.log(props.pets)
-    // console.log(props.owner)
-
-    // const pets = props.pets
-    // const owner = props.owner
-
-    // One way to destructure an object
-    // const {pets, owner} = props
-
-    // console.log(pets)
-    // console.log(owner)
-
-    // const petLIElements = pets.map(pet => {
-    //     return (
-    //         <li key={pet.id} className="pet">
-    //             <img src={pet.image} alt={pet.name}/>
-    //             <h4>{pet.name}</h4>
-    //         </li>
-    //     )
-    // })
-    // console.log(petLIElements)
-
+    // Deliverable # 10 solution code
     const petComponents = pets.map(pet => {
+        // Deliverable # 11 & 12 solution code
         return <Pet key={pet.id} pet={pet}/>
     })
 
     return (
         <ul className="pet-list">
-            {/* {petLIElements} */}
+            {/* Deliverable # 10 solution code */}
             {petComponents}
         </ul>
     )
 }
 
+// Deliverable # 6 solution code
 export default PetList;
