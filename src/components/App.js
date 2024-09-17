@@ -1,3 +1,8 @@
+import Header from './Header';
+import PetList from "./PetList";
+
+import ExampleComponent from './ExampleComponent';
+
 function App() {
 
   const pets = [
@@ -38,8 +43,23 @@ function App() {
     }
   ]
 
+//   console.log(pets[0].name)
+
+//   const props = {
+//     petsData: pets,
+//     firstPetName: pets[0].name
+//   }
+
   return (
-    <h1>Welcome to React!</h1>
+    <div className="app">
+        <Header/>
+        <PetList pets={pets} owner={"Alice"}/>
+
+        {/* {ExampleComponent(pets, pets[0].name)} */}
+        {/* {ExampleComponent(props)} */}
+        {/* {ExampleComponent({petsData: pets, firstPetName: pets[0].name})} */}
+        {/* <ExampleComponent petsData={pets} firstPetName={pets[0].name}/> */}
+    </div>
   );
 }
 
