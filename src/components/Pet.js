@@ -1,56 +1,33 @@
+// Deliverable # 1 solution code
 import {useState} from "react";
 
 function Pet({pet}){
 
-    // let counter2 = 70
+    // Deliverable # 1 solution code
+    const [count, setCount] = useState(0)
 
-    // console.log(useState(0))
-    // console.log(useState(0)[0])
-    // console.log(useState(0)[1])
-
-    // let numberOfLikes = 0
-
-    // const useStateArray = useState(0)
-    // const numberOfLikes = useStateArray[0]
-    // const setNumberOfLikes = useStateArray[1]
-    // console.log(numberOfLikes)
-    // console.log(setNumberOfLikes)
-
-    const [numberOfLikes, setNumberOfLikes] = useState(0)
-    // console.log(numberOfLikes)
-    
-    // console.log(numberOfLikes)
-    // console.log(setNumberOfLikes)
-
+    // Deliverable # 4 solution code
     const [displayAnimalType, setDisplayAnimalType] = useState(false)
-    // console.log(displayAnimalType)
 
-    // Vanilla JS example of adding an event listener (pseudocode)
-    // buttonElement.addEventListener('click', () => {
-    //     numberOfLikes++
-    //     console.log(numberOfLikes)
-    // })
-
-    function increaseNumberOfLikes() {
-        setNumberOfLikes(numberOfLikes + 1)
-        // counter2++
-        // console.log(counter2)
+    // Deliverable # 3 solution code
+    function increaseCount() {
+        setCount(count + 1)
     }
 
+    // Deliverable # 6 solution code
     function toggleDisplayAnimalType(){
-        setDisplayAnimalType(displayAnimalType => {
-            return !displayAnimalType
-        })
-        // setDisplayAnimalType(displayAnimalType => {
-        //     return !displayAnimalType
-        // })
+        setDisplayAnimalType(!displayAnimalType)
     }
 
     return (
         <li className="pet">
             <img src={pet.image} alt={pet.name}/>
+
+            {/* Deliverable # 5 & 6 solution code */}
             <h4 onClick={toggleDisplayAnimalType} className={displayAnimalType ? "display-animal-type" : ""}>{displayAnimalType ? pet.animal_type : pet.name}</h4>
-            <button onClick={increaseNumberOfLikes} className="like-button">{numberOfLikes} Likes</button>
+
+            {/* Deliverable # 2 & 3 solution code */}
+            <button onClick={increaseCount} className="like-button">{count} Likes</button>
         </li>
     );
 }
