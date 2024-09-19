@@ -1,9 +1,11 @@
 import Pet from "./Pet";
 
-function PetList({ pets }){
+function PetList({pets, deletePet, updatePet}){
 
     const petComponents = pets.map(pet => {
-        return <Pet key={pet.id} pet={pet}/>
+
+        // Deliverable # 5 & 9 solution code
+        return <Pet key={pet.id} pet={pet} deletePet={deletePet} updatePet={updatePet}/>
     })
 
     return (
