@@ -36,9 +36,16 @@ function PetPage(){
         }))
     }
 
+    // Deliverable # 1 solution code
+    function addPet(newPet){
+        setPetsState([...petsState, newPet]);
+    }
+
     return (
         <main>
-            <NewPetForm/>
+            {/* Deliverable # 1 solution code */}
+            <NewPetForm addPet={addPet}/>
+
             <Search updateSearchText={updateSearchText}/>
             <PetList pets={filteredPets} deletePet={deletePet} updatePet={updatePet}/>
         </main>
