@@ -11,6 +11,7 @@
 Please make sure that you are inside the folder for this repository which contains the `package.json` file before following these instructions for setup:
 
 1. Run `npm install` in your terminal to install the dependencies from the `package.json` file.
+
 2. Run `npm start` in your terminal to run this React app in the browser. If your browser does not automatically open the page for you, open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Deliverables
