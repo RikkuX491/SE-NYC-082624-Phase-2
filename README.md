@@ -13,7 +13,9 @@
 Please make sure that you are inside the folder for this repository which contains the `package.json` file before following these instructions for setup:
 
 1. Run `npm install` in your terminal to install the dependencies from the `package.json` file.
+
 2. Run `npm run server`. This will run your backend on port `4000`.
+
 3. In a new terminal, run `npm start` in your terminal to run this React app in the browser. If your browser does not automatically open the page for you, open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Deliverables
@@ -25,9 +27,12 @@ Today we will learn about Side Effects & Data Fetching in React to help us accom
 1. Use the `useEffect` hook in the `PetPage` component in `PetPage.js`. Inside the callback for
   `useEffect`, use the `fetch()` function to make a `GET` request to
   `http://localhost:4000/pets` and retrieve the pets data from the server. Call the `setPets` setter function to update the state to contain the pets data retrieved from the server. Make sure to include an empty dependency array so that the code inside of the callback function in `useEffect` (the side effect) will only run once! The pets should now display on the webpage in the browser.
+
 2. When submitting the `<form>` to add a new pet, a new id is generated for the new pet using the `uuid()` function in the `NewPetForm` component in `NewPetForm.js`. Delete line 20 in `NewPetForm.js` (this is the line with the following code `id: uuid(),`) so that we are no longer using the `uuid()` function to generate a new id for the new pet.
+
 3. Modify the code in the `addPet` function in the `PetPage` component to use the `fetch()` function to make a `POST` request to `http://localhost:4000/pets` to add the new pet to the database (db.json) when the form is submitted. Implement a pessimistic rendering approach that will call the `setPets` setter function to update the state with the pets data to add the new pet to the state after getting the data for the new pet from the server when the `POST` request is successful. The new pet should display on the webpage in the browser, as well as all of the other pets, and should persist when refreshing the page.
-- Note: If you take a look in the `db.json` file and see where the new pet was added (if the `POST` request was successful), you will notice that the JSON Server took care of generating a new id for the new pet! We no longer need to worry about generating a new id manually since the JSON Server will take care of generating a new id for the new object added via `POST` request.
+
+Note: If you take a look in the `db.json` file and see where the new pet was added (if the `POST` request was successful), you will notice that the JSON Server took care of generating a new id for the new pet! We no longer need to worry about generating a new id manually since the JSON Server will take care of generating a new id for the new object added via `POST` request.
 
 ## Fetching Data with useEffect
 
