@@ -12,7 +12,7 @@
 |2 | Components & Props                 |[02_starter](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/02_starter)|[02_example_code](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/02_example_code)|[02_solution](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/02_solution)|
 |3 | State & Events                     |[03_starter](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/03_starter)|[03_example_code](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/03_example_code)|[03_solution](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/03_solution)|
 |4 | Information Flow                   |[04_starter](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/04_starter)|[04_example_code](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/04_example_code)|[04_solution](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/04_solution)|
-|5 | Forms                              |[05_starter](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/05_starter)|[05_example_code](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/05_example_code)||
+|5 | Forms                              |[05_starter](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/05_starter)|[05_example_code](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/05_example_code)|[05_solution](https://github.com/RikkuX491/SE-NYC-082624-Phase-2/tree/05_solution)|
 |6 | Side Effects & Data Fetching       ||||
 |7 | PATCH & DELETE                     ||||
 |8 | Client-Side Routing                ||||
