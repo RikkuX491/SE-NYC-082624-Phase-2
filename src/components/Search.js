@@ -1,4 +1,4 @@
-function Search({updateSearchText}){
+function Search({updateSearchText, searchText}){
 
     return (
         <div className="searchbar">
@@ -8,6 +8,7 @@ function Search({updateSearchText}){
                 id="search"
                 placeholder="Type a name to search..."
                 onChange={updateSearchText}
+                value={searchText}
             />
         </div>
     )

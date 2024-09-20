@@ -36,10 +36,19 @@ function PetPage(){
         }))
     }
 
+    function addPet(newPetData){
+        // console.log(petsState)
+        // console.log(newPetData)
+        // petsState.push(newPetData)
+        // setPetsState(petsState)
+
+        setPetsState([...petsState, newPetData])
+    }
+
     return (
         <main>
-            <NewPetForm/>
-            <Search updateSearchText={updateSearchText}/>
+            <NewPetForm addPet={addPet}/>
+            <Search updateSearchText={updateSearchText} searchText={searchText}/>
             <PetList pets={filteredPets} deletePet={deletePet} updatePet={updatePet}/>
         </main>
     );

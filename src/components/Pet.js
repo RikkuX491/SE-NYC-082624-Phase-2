@@ -8,7 +8,10 @@ function Pet({pet, deletePet, updatePet}){
         setDisplayAnimalType(!displayAnimalType)
     }
 
-    function handleClick(){
+    function handleClick(event){
+        // console.log(event)
+        // console.log(event.nativeEvent)
+        // console.log(event.target)
         const updatedPetData = {
             ...pet,
             likes: pet.likes + 1
