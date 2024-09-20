@@ -31,12 +31,15 @@ and added to our website.
 
   ``` jsx
   const newPet = {
-    id: uuid(), // the `uuid` library can be used to generate a unique id
+    id: uuid(),
     name: petName,
     image: petImage,
-    animal_type: petAnimalType
+    animal_type: petAnimalType,
+    likes: 0
   };
   ```
+
+Note: The `uuid` library can be used to generate a unique id. The initial value for `likes` for a new pet should be `0`.
 
 - Add the new pet to the website by updating state. You should create a prop called `addPet` as a callback which should be passed to the `NewPetForm` component. `addPet` should have 1 parameter which should receive the value of the new pet to be added.
 
