@@ -17,7 +17,7 @@ function NewPetForm({addPet}) {
     event.preventDefault()
 
     const newPet = {
-      id: uuid(),
+      // id: uuid(),
       ...formData,
       likes: 0
     }
