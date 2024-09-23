@@ -1,5 +1,8 @@
 import PetList from "./PetList";
-import { useState } from "react";
+
+// Deliverable # 1 solution code
+import { useState, useEffect } from "react";
+
 import Search from './Search';
 import NewPetForm from "./NewPetForm";
 
@@ -7,6 +10,13 @@ function PetPage(){
 
     const [pets, setPets] = useState([])
     const [searchText, setSearchText] = useState("")
+
+    // Deliverable # 1 solution code
+    useEffect(() => {
+        fetch("http://localhost:4000/pets")
+        .then(response => response.json())
+        .then(petsData => setPets(petsData))
+    }, [])
 
     const filteredPets = pets.filter(pet => {
         return pet.name.toUpperCase().includes(searchText.toUpperCase())
@@ -33,8 +43,18 @@ function PetPage(){
         }))
     }
 
+    // Deliverable # 3 solution code
     function addPet(newPet){
-        setPets([...pets, newPet])
+        fetch("http://localhost:4000/pets", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(newPet)
+        })
+        .then(response => response.json())
+        .then(newPetData => setPets([...pets, newPetData]))
     }
 
     return (

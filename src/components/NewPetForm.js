@@ -16,8 +16,8 @@ function NewPetForm({addPet}) {
   function handleSubmit(event){
     event.preventDefault()
 
+    // Deliverable # 2 solution code
     const newPet = {
-      id: uuid(),
       ...formData,
       likes: 0
     }
