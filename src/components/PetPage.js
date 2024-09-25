@@ -22,21 +22,41 @@ function PetPage(){
         setSearchText(event.target.value)
     }
 
+    // Deliverable # 5 solution code
     function deletePet(id){
-        setPets(pets.filter(pet => {
-            return pet.id !== id
-        }))
+        fetch(`http://localhost:4000/pets/${id}`, {
+            method: "DELETE"
+        })
+        .then(response => {
+            if(response.ok){
+                setPets(pets.filter(pet => {
+                    return pet.id !== id
+                }))
+            }
+        })
     }
 
-    function updatePet(updatedPetData){
-        setPets(pets.map(pet => {
-            if(pet.id === updatedPetData.id){
-                return updatedPetData
-            }
-            else{
-                return pet
-            }
-        }))
+    // Deliverable # 3 solution code
+    function updatePet(updatedPetData, id){
+        fetch(`http://localhost:4000/pets/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(updatedPetData)
+        })
+        .then(response => response.json())
+        .then(updatedPet => {
+            setPets(pets.map(pet => {
+                if(pet.id === updatedPet.id){
+                    return updatedPet
+                }
+                else{
+                    return pet
+                }
+            }))
+        })
     }
 
     function addPet(newPet){
