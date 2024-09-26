@@ -5,8 +5,10 @@ import { useParams, useOutletContext } from "react-router-dom";
 
 function PetProfile(){
 
+    // Deliverable # 26 solution code
     const { id } = useParams();
 
+    // Deliverable # 27 solution code
     const { updatePet, deletePet } = useOutletContext();
     
     const [pet, setPet] = useState(null);
@@ -19,6 +21,7 @@ function PetProfile(){
     });
 
     useEffect(() => {
+        // Deliverable # 28 solution code
         fetch(`http://localhost:4000/pets/${id}`)
         .then(response => response.json())
         .then(petData => setPet(petData));
