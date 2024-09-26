@@ -1,9 +1,13 @@
 import Pet from "./Pet";
 
-// Delete the pets prop from the PetList component
-function PetList({ pets }){
+// Deliverable # 16 solution code
+import { useOutletContext } from "react-router-dom";
 
-    // Write the code to retrieve the pets stateful variable using useOutletContext()
+// Deliverable # 15 solution code
+function PetList(){
+
+    // Deliverable # 17 solution code
+    const { pets } = useOutletContext();
 
     const petComponents = pets.map(pet => {
         return <Pet key={pet.id} pet={pet}/>

@@ -4,8 +4,19 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+// Deliverable # 7 solution code
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+// Deliverable # 10 solution code
+import routes from './routes';
+
+// Deliverable # 11 solution code
+const router = createBrowserRouter(routes);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+
+// Deliverable # 12 solution code
+root.render(<RouterProvider router={router} />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
