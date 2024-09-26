@@ -3,6 +3,11 @@ import PetList from "./PetList";
 import { useState, useEffect } from "react";
 import NewPetForm from "./NewPetForm";
 
+import ErrorPage from "./ErrorPage";
+import NavBar from "./NavBar";
+
+import { Outlet } from "react-router-dom";
+
 function App(){
 
     const [pets, setPets] = useState([]);
@@ -10,11 +15,15 @@ function App(){
     // const [route, setRoute] = useState(window.location.pathname);
 
     // let component = null;
+
     // if(route === "/"){
-    //   component = <PetList pets={pets} deletePet={deletePet} updatePet={updatePet}/>
+    //   component = <PetList pets={pets}/>
     // }
     // else if(route === "/add_pet"){
     //   component = <NewPetForm addPet={addPet}/>
+    // }
+    // else{
+    //     component = <ErrorPage/>
     // }
 
     useEffect(() => {
@@ -73,20 +82,42 @@ function App(){
 
     // function navigate(event){
     //   event.preventDefault();
+
+    //   console.log(event)
+    //   console.log(event.target.href)
+
     //   window.history.pushState(null, "", event.target.href);
     //   setRoute(window.location.pathname);
     // }
 
     return (
       <div className="app">
+
+        {/* <a onClick={navigate} href="/add_pet">Go to Pets page</a> */}
+
         {/* <nav className="navbar">
-          <a className={route === "/" ? "active" : ""} onClick={(event) => navigate(event, "/")} href="/">Home</a>
-          <a className={route === "/add_pet" ? "active" : ""} onClick={(event) => navigate(event, "/add_pet")} href="/add_pet">Add Pet</a>
+          <a className={route === "/" ? "active" : ""} onClick={navigate} href="/">Home</a>
+          <a className={route === "/add_pet" ? "active" : ""} onClick={navigate} href="/add_pet">Add Pet</a>
         </nav> */}
+
+        {/* <NavBar route={route} navigate={navigate}/> */}
+
+        <NavBar/>
+
         <Header/>
-        <NewPetForm addPet={addPet}/>
-        <PetList pets={pets}/>
+
+        {/* <NewPetForm addPet={addPet}/>
+        <PetList pets={pets}/> */}
+
         {/* {component} */}
+        <Outlet context={
+            {
+                pets: pets,
+                addPet: addPet,
+                updatePet: updatePet,
+                deletePet: deletePet
+            }
+        }/>
       </div>
     );
 }
