@@ -1,7 +1,5 @@
 import Header from "./Header";
-import PetList from "./PetList";
 import { useState, useEffect } from "react";
-import NewPetForm from "./NewPetForm";
 
 // Deliverable # 13 solution code
 import NavBar from "./NavBar";
